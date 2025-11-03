@@ -3,6 +3,25 @@
 A production-ready reference for **Risk-Based Testing (RBT)** that turns **telemetry + past incidents** into an explainable, ranked list of modules to test and monitor. Includes an **Ops Agent** endpoint that detects spikes and recommends **alert-threshold tweaks** and **runbook steps**.
 
 ---
+## 🖥️ UI Demo
+
+Run the API and open the built-in docs:
+- Swagger UI: `http://127.0.0.1:8000/docs`
+- ReDoc: `http://127.0.0.1:8000/redoc`
+
+### Priorities (Incident-aware)
+Shows ranked modules with XAI reasons and per-feature contributions.
+![Priorities list](docs/ui-priorities.png)
+![Priorities expanded](docs/ui-priorities2.png)
+
+### Module Details (`/modules/{name}`)
+Feature averages, risk score/band, contributions, and reasons for one module.
+![Module detail – checkout](docs/ui-module.png)
+![Module detail – more](docs/ui-module2.png)
+
+### Ops Agent Recommendations (`/ops/recommend`)
+EWMA spike detection with suggested alert thresholds and module-aware runbook steps.
+![Ops recommendations](docs/ui-ops.png)
 
 ## ✨ What’s inside
 
